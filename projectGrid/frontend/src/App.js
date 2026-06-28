@@ -23,7 +23,6 @@ const GRID_LINKS = [
   { name: "Assumptions", url: "http://localhost:5175", desc: "Manage project assumptions", icon: "AG" },
   { name: "Dependencies", url: "http://localhost:3002", desc: "Manage project dependencies", icon: "DG" },
   { name: "Features Grid", url: "http://localhost:3003", desc: "Manage project features", icon: "FG" },
-  { name: "Streams Grid", url: "http://localhost:3004", desc: "Manage project streams", icon: "SG" },
 ];
 
 export default function App() {

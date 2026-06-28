@@ -148,5 +148,55 @@
     "isDefault": true,
     "createdAt": "2026-06-28T11:02:43.290Z",
     "updatedAt": "2026-06-28T11:02:43.290Z"
+  },
+  {
+    "_id": "44e7b2ca-2581-418d-94d0-70bd8111bd04",
+    "projectName": "hello",
+    "version": "1",
+    "streamName": "Testing",
+    "percentage": 0,
+    "isDefault": true,
+    "createdAt": "2026-06-28T16:14:44.402Z",
+    "updatedAt": "2026-06-28T16:14:44.402Z"
+  },
+  {
+    "_id": "10c089c1-b7fe-414a-8745-16d9f647b539",
+    "projectName": "hello",
+    "version": "1",
+    "streamName": "Project Management",
+    "percentage": 0,
+    "isDefault": true,
+    "createdAt": "2026-06-28T16:14:44.403Z",
+    "updatedAt": "2026-06-28T16:14:44.403Z"
+  },
+  {
+    "_id": "9edf87a3-fb3e-4953-8226-3a8e804fc88f",
+    "projectName": "hello",
+    "version": "1",
+    "streamName": "UI/UX",
+    "percentage": 0,
+    "isDefault": true,
+    "createdAt": "2026-06-28T16:14:44.403Z",
+    "updatedAt": "2026-06-28T16:14:44.403Z"
+  },
+  {
+    "_id": "56740a46-13a5-4eba-bb2a-d8b08620431a",
+    "projectName": "hello",
+    "version": "1",
+    "streamName": "Contingency",
+    "percentage": 0,
+    "isDefault": true,
+    "createdAt": "2026-06-28T16:14:44.403Z",
+    "updatedAt": "2026-06-28T16:14:44.403Z"
+  },
+  {
+    "_id": "604c803d-abd1-47da-92a2-d97b73e4df92",
+    "projectName": "hello",
+    "version": "1",
+    "streamName": "Data Warehousing",
+    "percentage": 0,
+    "isDefault": true,
+    "createdAt": "2026-06-28T16:14:44.403Z",
+    "updatedAt": "2026-06-28T16:14:44.403Z"
   }
 ]

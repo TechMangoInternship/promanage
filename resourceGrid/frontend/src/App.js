@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ResourceGrid from "./components/ResourceGrid";
+import StreamGrid from "./components/StreamGrid";
 import "./components/ResourceGrid.css";
 
 const getInitialTheme = () => {
@@ -36,9 +37,22 @@ function App() {
         </div>
       </header>
       <main className="rg-main">
-        <ResourceGrid projectName={projectName} version={version} />
+        <div style={{ marginBottom: 40 }}>
+          <h2 className="rg-section-title" style={{ fontSize: "16px", fontWeight: 700, letterSpacing: "0.05em", color: "var(--text-accent)", textTransform: "uppercase", marginBottom: 14 }}>
+            Streams Grid
+          </h2>
+          <StreamGrid projectName={projectName} version={version} />
+        </div>
+
+        <div style={{ borderTop: "2px dashed var(--border-subtle)", paddingTop: 30, marginTop: 40 }}>
+          <h2 className="rg-section-title" style={{ fontSize: "16px", fontWeight: 700, letterSpacing: "0.05em", color: "var(--text-accent)", textTransform: "uppercase", marginBottom: 14 }}>
+            Resource Grid
+          </h2>
+          <ResourceGrid projectName={projectName} version={version} />
+        </div>
+
         {projectName && (
-          <div style={{ marginTop: 20, textAlign: 'center' }}>
+          <div style={{ marginTop: 40, textAlign: 'center' }}>
             <a
               href={`http://localhost:3000?projectName=${encodeURIComponent(projectName)}&version=${encodeURIComponent(version || '')}`}
               className="rg-btn rg-btn-primary"
