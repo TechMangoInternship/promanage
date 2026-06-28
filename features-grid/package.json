@@ -1,0 +1,21 @@
+{
+  "name": "features-grid",
+  "version": "1.0.0",
+  "description": "Features Grid — Manage features with a 6-column editable grid backed by file persistence.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start:backend": "node backend/server.js",
+    "dev:backend": "node backend/server.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "install:frontend": "cd frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "resource-grid-frontend",
+  "version": "1.0.0",
+  "proxy": "http://localhost:5003",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.6.2",
+    "docx": "^7.8.2",
+    "file-saver": "^2.0.5",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

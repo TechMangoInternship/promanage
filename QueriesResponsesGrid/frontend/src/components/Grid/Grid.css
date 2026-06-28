@@ -1,0 +1,287 @@
+/* Grid-specific overrides — main styles are in App.css */
+
+.toast-container {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.toast-container .rg-toast {
+  position: relative;
+  transform: none;
+  left: auto;
+  bottom: auto;
+  animation: toast-in 0.25s ease;
+}
+
+.rg-cell-textarea {
+  width: 100%;
+  min-height: 32px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: border-color 0.15s, background 0.15s;
+  outline: none;
+  resize: vertical;
+  line-height: 1.4;
+}
+.rg-cell-textarea::placeholder { color: var(--text-muted); }
+.rg-cell-textarea:hover { border-color: var(--border); background: rgba(255,255,255,0.03); }
+.rg-cell-textarea:focus { border-color: var(--border-focus); background: rgba(79,124,255,0.06); }
+
+.rg-row-num {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  width: 44px;
+  background: var(--surface);
+  user-select: none;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────────── */
+.rg-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.rg-btn-secondary {
+  background: var(--glass-2);
+  color: var(--text);
+  border: 1px solid var(--border-subtle);
+}
+.rg-btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--sh-glow);
+  transform: translateY(-1px);
+}
+
+.rg-btn-share {
+  font-size: 12px;
+  padding: 8px 16px;
+  gap: 6px;
+}
+.rg-btn-share:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Modal Overlay ────────────────────────────────────────────── */
+.rg-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: modal-fade-in 0.2s ease;
+}
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.rg-modal {
+  background: var(--glass-elevated, #1c2033);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid var(--border-subtle, rgba(170,150,255,0.15));
+  border-radius: 20px;
+  width: 90%;
+  max-width: 640px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: modal-slide-up 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes modal-slide-up {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.rg-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+
+.rg-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text, #fff);
+  margin: 0;
+}
+
+.rg-modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle, rgba(170,150,255,0.15));
+  background: transparent;
+  color: var(--text-2, rgba(210,200,255,0.65));
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.rg-modal-close:hover {
+  background: var(--danger-bg, rgba(255,71,96,0.15));
+  color: var(--danger, #ff4760);
+  border-color: var(--danger, #ff4760);
+}
+
+.rg-modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.rg-modal-loading,
+.rg-modal-error,
+.rg-modal-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 40px 20px;
+  color: var(--text-2, rgba(210,200,255,0.65));
+  font-size: 14px;
+  text-align: center;
+}
+
+.rg-modal-error {
+  color: var(--danger, #ff4760);
+}
+
+.rg-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 24px 20px;
+  gap: 10px;
+}
+
+/* ── Share List ───────────────────────────────────────────────── */
+.rg-share-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rg-share-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-subtle, rgba(170,150,255,0.15));
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color 0.15s;
+}
+.rg-share-item:hover {
+  border-color: var(--border-hover, rgba(170,150,255,0.3));
+}
+
+.rg-share-query {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rg-share-num {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-3, rgba(210,200,255,0.3));
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.rg-share-text {
+  font-size: 13px;
+  color: var(--text, #fff);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.rg-share-url-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rg-share-input {
+  flex: 1;
+  font-size: 12px !important;
+  font-family: var(--font-mono, monospace) !important;
+  height: 32px !important;
+  user-select: all;
+}
+
+.rg-btn-copy {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font);
+  border-radius: 8px;
+  border: 1px solid var(--accent, #7870ff);
+  background: transparent;
+  color: var(--accent, #7870ff);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.rg-btn-copy:hover {
+  background: var(--accent, #7870ff);
+  color: #fff;
+}
+.rg-btn-copied {
+  background: var(--success, #34d399) !important;
+  border-color: var(--success, #34d399) !important;
+  color: #fff !important;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .rg-modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+  .rg-modal-header,
+  .rg-modal-body,
+  .rg-modal-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rg-share-url-row {
+    flex-direction: column;
+  }
+  .rg-btn-copy {
+    width: 100%;
+    justify-content: center;
+  }
+}

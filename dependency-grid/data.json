@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "7b29c541-1a16-48f7-a4af-4af25e7ffe04",
+    "text": "node.js",
+    "createdAt": "2026-06-19T09:22:29.752Z",
+    "updatedAt": "2026-06-19T09:22:29.752Z"
+  },
+  {
+    "_id": "b2a1e626-1338-4da4-bc9b-b3701b78de10",
+    "text": "tyescript",
+    "createdAt": "2026-06-19T09:22:41.447Z",
+    "updatedAt": "2026-06-19T09:22:41.447Z"
+  },
+  {
+    "_id": "c212a5c8-3de2-4958-ae7b-afad81d9c1e2",
+    "text": "mongo db",
+    "createdAt": "2026-06-19T09:22:56.547Z",
+    "updatedAt": "2026-06-19T09:22:56.547Z"
+  },
+  {
+    "_id": "72b3bd91-45e0-4745-8cc0-91b8aefe3a90",
+    "text": "javascript",
+    "createdAt": "2026-06-19T09:23:21.199Z",
+    "updatedAt": "2026-06-19T09:23:21.199Z"
+  },
+  {
+    "_id": "b1d27904-d5b6-4d30-8311-61267a69937f",
+    "projectName": "Test Project1",
+    "version": "Version 1",
+    "text": "New dependency",
+    "createdAt": "2026-06-24T11:13:16.058Z",
+    "updatedAt": "2026-06-24T11:13:16.058Z"
+  },
+  {
+    "_id": "24a1c365-655f-46e3-990b-5a9af44d372d",
+    "projectName": "Test Project1",
+    "version": "version 2",
+    "text": "New dependency",
+    "createdAt": "2026-06-24T11:13:24.830Z",
+    "updatedAt": "2026-06-24T11:13:24.830Z"
+  }
+]

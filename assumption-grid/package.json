@@ -1,0 +1,31 @@
+{
+  "name": "assumption-grid",
+  "version": "1.0.0",
+  "description": "Assumption Grid — Manage assumptions with a single-column editable grid backed by MongoDB.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start:backend": "node backend/server.js",
+    "dev:backend": "node backend/server.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "install:frontend": "cd frontend && npm install",
+    "seed": "node seed.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run start:frontend\""
+  },
+  "keywords": [
+    "assumption",
+    "grid",
+    "mern"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb-memory-server": "^10.4.0",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
